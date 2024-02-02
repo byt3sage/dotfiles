@@ -129,7 +129,6 @@ alias nrd="npm run dev"
 alias t="tmux-sessionizer"
 alias nx="npx nx"
 
-source ~/.config/dotfiles/.aliases
 
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
@@ -137,7 +136,7 @@ alias bref="vendor/bin/bref"
 export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
 
 if [[ $(uname) == "Darwin" ]]; then
-    # enable chruby
+    source ~/.config/dotfiles/.aliases
     source /opt/homebrew/share/chruby/chruby.sh
     source /opt/homebrew/share/chruby/auto.sh
     chruby ruby-3.3.0
